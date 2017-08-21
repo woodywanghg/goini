@@ -3,7 +3,6 @@ package goini
 import "os"
 import "io"
 import "bufio"
-import "fmt"
 import "strings"
 import "strconv"
 import "sync"
