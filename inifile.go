@@ -144,7 +144,6 @@ func (f *IniFile) ReadInt(section string, key string, defaultVal int) int {
 				continue
 			} else {
 				item := strings.Split(value, "=")
-				fmt.Printf("item=%v\n", item)
 				if len(item) < 2 {
 					continue
 				} else {
