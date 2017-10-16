@@ -20,6 +20,8 @@ func (f *IniFile) Reload() bool {
 
 	defer f.lock.Unlock()
 
+	f.aryLines = make([]string, 0)
+
 	var err error
 	f.fileHandle, err = os.Open(f.fileName)
 	if err != nil {
@@ -47,6 +49,7 @@ func (f *IniFile) Reload() bool {
 
 func (f *IniFile) Init(fileName string) bool {
 	var err error
+	f.fileName = fileName
 	f.fileHandle, err = os.Open(fileName)
 	if err != nil {
 		return false
